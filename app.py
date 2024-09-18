@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.app_logo import add_logo
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.stoggle import stoggle
 from streamlit_extras.let_it_rain import rain
@@ -14,16 +13,16 @@ import time
 import random
 
 # Set page config
-st.set_page_config(page_title="JSON to SQLite Converter", page_icon="🔄", layout="wide", theme = "dark")
+st.set_page_config(page_title="JSON to SQLite Converter", page_icon="🔄", layout="wide")
 
-# Function to generate random dark color
-def random_dark_color():
-    return "#{:02x}{:02x}{:02x}".format(random.randint(0, 100), random.randint(0, 100), random.randint(0, 100))
+# Function to generate random light color
+def random_light_color():
+    return "#{:02x}{:02x}{:02x}".format(random.randint(200, 255), random.randint(200, 255), random.randint(200, 255))
 
-# Function to set dynamic dark background
-def set_dynamic_dark_background():
-    color1 = random_dark_color()
-    color2 = random_dark_color()
+# Function to set dynamic light background
+def set_dynamic_light_background():
+    color1 = random_light_color()
+    color2 = random_light_color()
     st.markdown(
         f"""
         <style>
@@ -36,7 +35,7 @@ def set_dynamic_dark_background():
         unsafe_allow_html=True
     )
 
-# Custom CSS
+# Custom CSS for light mode
 st.markdown("""
 <style>
     .stButton>button {
@@ -44,26 +43,26 @@ st.markdown("""
         color: white;
     }
     .stCheckbox {
-        color: white;
+        color: #333333;
     }
     .stDataFrame {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.7);
     }
     .stMarkdown {
-        color: white;
+        color: #333333;
     }
     .stSelectbox {
-        color: white;
+        color: #333333;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # Set initial background
-set_dynamic_dark_background()
+set_dynamic_light_background()
 
 # Function to change background color
 def change_background():
-    set_dynamic_dark_background()
+    set_dynamic_light_background()
     st.rerun()
 
 def sanitize_identifier(identifier):
@@ -166,8 +165,6 @@ def main():
     with st.sidebar:
         st.title("About")
         st.info("This app converts JSON to SQLite and allows you to explore the data.")
-        st.title("Important")
-        st.info("Please convert the app in dark mode for the best experience. I made it for dark mode only. You can change  it from the top right settings")
         st.subheader("Connect with me")
         cols = st.columns(3)
         cols[0].markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/amanm063)")
