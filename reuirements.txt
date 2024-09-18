@@ -1,0 +1,9 @@
+streamlit
+streamlit-extras
+pandas
+sqlite3
+io
+tempfile
+os
+time
+random
