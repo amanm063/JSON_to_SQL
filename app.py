@@ -170,9 +170,9 @@ def main():
         st.info("Please convert the app in dark mode for the best experience. I made it for dark mode only. You can change  it from the top right settings")
         st.subheader("Connect with me")
         cols = st.columns(3)
-        cols[0].markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/yourusername)")
-        cols[1].markdown("[![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/yourprofile)")
-        cols[2].markdown("[![Instagram](https://img.icons8.com/fluent/48/000000/instagram-new.png)](https://www.instagram.com/yourprofile)")
+        cols[0].markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/amanm063)")
+        cols[1].markdown("[![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/amanmalik063/)")
+        cols[2].markdown("[![Instagram](https://img.icons8.com/fluent/48/000000/instagram-new.png)](https://www.instagram.com/aman_mallk/)")
         
         if st.button("Change Background"):
             change_background()
