@@ -14,7 +14,7 @@ import time
 import random
 
 # Set page config
-st.set_page_config(page_title="JSON to SQLite Converter", page_icon="🔄", layout="wide")
+st.set_page_config(page_title="JSON to SQLite Converter", page_icon="🔄", layout="wide", theme = "dark")
 
 # Function to generate random dark color
 def random_dark_color():
